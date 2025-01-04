@@ -1,0 +1,46 @@
+<!-- <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor
+      [editor]="editor"
+      [ngModel]="html"
+      [disabled]="false"
+      [placeholder]="'Type here...'"
+    ></ngx-editor>
+  </div> -->
+
+  <h2 class="title">Blog artical</h2>
+  <div class="container">   
+    <article class="col-12 col-md-12" >          
+        <mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput  >
+        </mat-form-field>                
+    </article>
+</div>
+<div class="container"> 
+  <article class="col-12 col-md-12" >                 
+      <mat-form-field class="example-full-width">
+        <mat-label>Short description</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <hr class="tm-hr-primary">
+  </article>
+</div>
+  <div class="container">
+    
+    <div class="d-flex justify-content-between tm-pt-45">
+      <span class="tm-color-primary"> <h4>Blog post</h4>       </span>
+  </div>
+    <div class="content">
+      <div class="display">
+      </div>
+      <form [formGroup]="form">
+        <div class="editor">
+          <ngx-editor-menu [editor]="editor" [toolbar]="toolbar" >
+          </ngx-editor-menu>
+          <ngx-editor [editor]="editor"  [(ngModel)]="editordoc" formControlName="editorContent">
+          </ngx-editor>
+        </div>
+      </form>
+    </div>
+  </div>
